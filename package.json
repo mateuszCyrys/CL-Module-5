@@ -1,14 +1,14 @@
 {
   "name": "workspace",
   "version": "0.0.0",
-  "description": "example codio app",
+  "description": "CL WORKSHOP",
   "main": "index.js",
-  "scripts": {
-
-  },
+  "scripts": {},
   "author": "",
   "dependencies": {
     "cheerio": "~0.20.0",
+    "esprima": "^4.0.1",
+    "fs": "0.0.1-security",
     "json-server": "^0.14.2",
     "mocha": "^5.2.0",
     "puppeteer": "^1.8.0",
