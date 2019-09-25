@@ -1,12 +1,18 @@
-let TestResult, SingleTestResult, SimpleError;
+let TestResult, SingleTestResult, SimpleError, EsprimaHelper, Helper;
+/** Load based if run from solution or run by student */
 try {
     TestResult = require("../../assets/TestResult");
     SingleTestResult = require("../../assets/SingleTestResult");
     SimpleError = require("../../assets/SimpleError");
-}catch (e) {
+    EsprimaHelper = require("../../assets/EsprimaHelper");
+    Helper = require("../../assets/Helper");
+} catch (e) {
     TestResult = require("../../../assets/TestResult");
     SingleTestResult = require("../../../assets/SingleTestResult");
     SimpleError = require("../../../assets/SimpleError");
+    EsprimaHelper = require("../../../assets/EsprimaHelper");
+    Helper = require("../../../assets/Helper");
+
 }
 
 const puppeteer = require("puppeteer");
@@ -15,10 +21,13 @@ const assert = require('assert');
 
 
 //PREPARE
-let testResult = new TestResult("fero.module1.exam1.task1");
+let testName = Helper.createTestName("fero",2, __dirname);
+console.log("===========");
+console.log(testName);
+console.log("===========");
+let testResult = new TestResult(testName);
 let browser;
 let subTests = [];
-
 
 let app = require("../task1");
 
