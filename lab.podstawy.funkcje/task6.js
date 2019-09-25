@@ -6,6 +6,7 @@ function createArray(rows) {
 
     }
     console.log(array);
+    return array
 }
 
 
