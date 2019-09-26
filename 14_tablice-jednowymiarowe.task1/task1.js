@@ -1,13 +1,13 @@
 //Piszcie kod pod tym komentarzem.
 
 function createArray(number) {
-    var newArray = [10];
+    let newArray = [];
 
-    for(var counter = 1;; counter <= number) {
+    for(var counter = 1; counter <= number; counter++) {
         newArray.push(counter);
     }
 
-    return newArray[2];
+    return newArray;
 }
 
 
