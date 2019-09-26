@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 node_modules
 package-lock.json
 .idea
-=======
-node_modules
-.idea
->>>>>>> 261e040c22b0dbd1f14140197434eba493e66066
 *.iml
