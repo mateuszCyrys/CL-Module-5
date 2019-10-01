@@ -18,36 +18,17 @@ try {
 const puppeteer = require("puppeteer");
 const path = require("path");
 const assert = require('assert');
-const rewire = require('rewire');
+
 
 //PREPARE
-let testName = Helper.createTestName("fero", 2, __dirname);
+let testName = Helper.createTestName("fero",2, __dirname);
 console.log("===========");
 console.log(testName);
-console.log("===========");
-let testResult = new TestResult(testName);
+console.log("===========");let testResult = new TestResult(testName);
 let browser;
 let subTests = [];
 
-let app = rewire("../task2.js");
-let multiply = app.__get__('multiply');
-
-/**
- * DATA
- */
-
-let arr1 = [1, 2, 3, 4, 5, 6, 7];
-let res1 = 5040;
-
-let arr2 = [1, 1, 1, 1];
-let res2 = 1;
-
-let arr3 = [2, 8, 3, 7];
-let res3 = 336;
-
-let arr4 = [];
-let res4 = null;
-
+let app = require("../task1");
 
 describe("", () => {
 
@@ -70,48 +51,41 @@ describe("", () => {
 
 
     let test1 = new SingleTestResult(
-        "Wynik " + res1 + " dla tablicy " + arr1,
-        "", 1);
+        'Oblicza wynik potęgowania',
+        '',
+        1
+    );
     subTests.push(test1);
     it(test1.testName, async () => {
-        let result = multiply(arr1);
-        assert.equal(res1, result);
+        let result = app.calculator(2, 3, '^');
+        assert.equal(8, result);
         test1.points = 1;
     });
 
     let test2 = new SingleTestResult(
-        "Wynik " + res2 + " dla tablicy " + arr2,
-        "",
+        'Oblicza wynik pierwiastkowania',
+        '',
         1
     );
     subTests.push(test2);
     it(test2.testName, async () => {
-        let result = multiply(arr2);
-        assert.equal(res2, result);
+        let result = app.calculator(8, 3, 'sq');
+        assert.equal(2, result);
         test2.points = 1;
     });
+
     let test3 = new SingleTestResult(
-        "Wynik " + res3 + " dla tablicy " + arr3,
-        "",
+        'Prawidłowo zaokrągla liczby',
+        '',
         1
     );
     subTests.push(test3);
     it(test3.testName, async () => {
-        let result = multiply(arr3);
-        assert.equal(res3, result);
+        let result = app.calculator(99.3878, 2, 'dec');
+        assert.equal(99.39, result);
         test3.points = 1;
     });
-    let test4 = new SingleTestResult(
-        "Wynik " + res4 + " dla pustej tablicy ",
-        "",
-        1
-    );
-    subTests.push(test4);
-    it(test4.testName, async () => {
-        let result = multiply(arr4);
-        assert.equal(res4, result);
-        test4.points = 1;
-    });
+
 
 
 });

@@ -1,3 +1,4 @@
+# Zadanie
 
 Napiszcie funkcję **calculator(num1, num2, operation)**, która będzie wyliczać  i zwracać wynik odpowiedniego działania.
 
