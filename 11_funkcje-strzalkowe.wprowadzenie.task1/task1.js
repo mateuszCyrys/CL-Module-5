@@ -9,10 +9,14 @@ function getNumber(number, arr){
     return false;
 }
 
+
+//new
+let sumTwo = (num1, num2) => num1 + num2 ;
+//old
 function sumTwo(num1, num2){
     return num1 + num2;
 }
-
+let printarray = (array) =>
 let printArray = function(array) {
     for(let i=0; i<array.length; i++){
         console.log(array[i]);
@@ -22,8 +26,9 @@ let printArray = function(array) {
 //Przykład z metody iteracyjnej forEach - będą te metody omawiane w kolejnych działach m.in. przy programowaniu funkcyjnym
 //Przykład abyście zobaczyli jak można ładnie skrócić kod ;)
 
-let printArrayValues = function(array) {
-    array.forEach(function(element){
+
+let printArrayValues = (array) => {
+    array.forEach(element => {
         console.log(element);
     })
 };
