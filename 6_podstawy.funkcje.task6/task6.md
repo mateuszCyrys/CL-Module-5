@@ -1,4 +1,17 @@
-Stwórzcie funkcję **createArray(rows)**, która tworzy i zwraca tablicę. 
+function createArray(rows) {
+    let array = [];
 
-Jej rozmiar ma być zgodny z parametrem **rows**, a każdy kolejny element zawiera kolejne liczby całkowite począwszy od 1.
+    for (let i = 0; i < rows; i++) {
+        array[i] = i+1;
 
+    }
+    console.log(array);
+    return array
+}
+
+
+createArray(5)
+
+
+//Nie modyfikujcie niżej kodu
+module.exports = {createArray};

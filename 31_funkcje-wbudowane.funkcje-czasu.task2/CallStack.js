@@ -4,10 +4,10 @@ let counter = 1;
 function counting(){
     console.log(counter);
     counter++;
+    if(counter===7){
+        clearInterval(interval);
+    }
 }
 
-let interval = setInterval( counting, 10);
+let interval = setInterval( counting, 1000);
 
-if(counter==100){
-    clearInterval(counter);
-}

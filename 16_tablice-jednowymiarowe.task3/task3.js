@@ -19,6 +19,10 @@ function addArrays(array1, array2) {
             array1[i] = 0;
             }
 
+        if (isNaN(array2[i]))
+        {
+            array2[i] = 0;
+        }
         nara[i] = array1[i] + array2[i];
 
     }
@@ -26,8 +30,8 @@ function addArrays(array1, array2) {
     return nara;
 }
 
-let g = [1,2,3,4];
-let f = [1,2,3,4,5];
+let g = [1,2,3,4,9,8];
+let f = [1,1,1,1,1];
 addArrays(g,f)
 
 

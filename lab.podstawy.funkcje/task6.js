@@ -2,7 +2,7 @@ function createArray(rows) {
     let array = [];
 
     for (let i = 0; i < rows; i++) {
-        array[i] = i+1;
+       array.push(i+1);
 
     }
     console.log(array);

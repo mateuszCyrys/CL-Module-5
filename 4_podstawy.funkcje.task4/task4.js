@@ -1,4 +1,12 @@
+function getMissingElement(array){
 
+    for(let i = 1; i<=array.length; i++) {
+        if(array[i]-array[i-1]>1){
+            return i-1
+        }
+    }
 
-//Nie modyfikujcie niżej kodu
-module.exports = {getMissingElement};
+    return "null"
+}
+
+console.log(getMissingElement([1,3,4,4,5]))

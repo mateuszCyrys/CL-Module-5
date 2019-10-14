@@ -17,3 +17,14 @@ let people = [
         profession: "trener"
     }
 ];
+
+
+let setFunnyName = function(...par) {
+    let newTable = [people,...par]
+    return newTable;
+}
+
+
+let a = setFunnyName(["Ala", "Puszek"],["Jan", "Karol"]);
+
+console.log(a)

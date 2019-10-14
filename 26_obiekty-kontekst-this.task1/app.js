@@ -11,9 +11,14 @@ order.addPosition(productMouse, 2);
 order.addPosition(productKeybord, 4);
 order.addPosition(productPrinter,1);
 
-let client = new Client("John Black");
-let order = new Order(client, "ZO/0002");
-order.addPosition(productMouse, 2);
-order.addPosition(productKeybord, 4);
-order.addPosition(productPrinter,1);
+let client2 = new Client("John Black");
+let order2 = new Order(client2, "ZO/0002");
+order2.addPosition(productMouse, 2);
+order2.addPosition(productKeybord, 4);
+order2.addPosition(productPrinter,1);
+
+
+
+
+
 

@@ -1,4 +1,11 @@
+function getLastNumbers(number, array){
+
+    table = [];
+    for (let i = 0; i>array.length; i++){
 
 
-//Nie modyfikujcie niżej kodu
-module.exports = {getLastNumbers};
+    }
+
+}
+
+

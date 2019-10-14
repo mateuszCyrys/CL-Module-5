@@ -1,6 +1,5 @@
 
-
-function getNumber(number, arr){
+let getNumber = (number, arr) => {
     for(let i=0; i<arr.length; i++){
         if(arr[i] == number){
             return true;
@@ -10,14 +9,9 @@ function getNumber(number, arr){
 }
 
 
-//new
-let sumTwo = (num1, num2) => num1 + num2 ;
-//old
-function sumTwo(num1, num2){
-    return num1 + num2;
-}
-let printarray = (array) =>
-let printArray = function(array) {
+let sumTwo = (num1,num2) => num1+num2;
+
+let printArray = array => {
     for(let i=0; i<array.length; i++){
         console.log(array[i]);
     }
